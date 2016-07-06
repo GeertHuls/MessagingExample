@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "exports": {
+    "WheelsOnFire.Messaging/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.6.1",
+      "compile": {
+        "bin/Debug/WheelsOnFire.Messaging.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/WheelsOnFire.Messaging.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/WheelsOnFire.Messaging.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    }
+  }
+}

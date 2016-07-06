@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WheelsOnFireWeb", "WheelsOnFireWeb\WheelsOnFireWeb.xproj", "{7180352E-797D-4A52-8881-857EBD8FFCC5}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{C3BA8D67-8EE5-4AD1-A533-7FDD61352821}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WheelsOnFireWeb", "WheelsOnFireWeb\WheelsOnFireWeb.xproj", "{3915E249-6F23-4354-A1FE-A27C6721333F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WheelsOnFire.Messaging", "WheelsOnFire.Messaging\WheelsOnFire.Messaging.csproj", "{E7188AAC-5A67-4AE3-BDB1-F80B53C2DC27}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{EBE8A2C2-D258-4FEC-98C9-B803DF297E99}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,15 +17,20 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7180352E-797D-4A52-8881-857EBD8FFCC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7180352E-797D-4A52-8881-857EBD8FFCC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7180352E-797D-4A52-8881-857EBD8FFCC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7180352E-797D-4A52-8881-857EBD8FFCC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3915E249-6F23-4354-A1FE-A27C6721333F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3915E249-6F23-4354-A1FE-A27C6721333F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3915E249-6F23-4354-A1FE-A27C6721333F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3915E249-6F23-4354-A1FE-A27C6721333F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7188AAC-5A67-4AE3-BDB1-F80B53C2DC27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7188AAC-5A67-4AE3-BDB1-F80B53C2DC27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7188AAC-5A67-4AE3-BDB1-F80B53C2DC27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7188AAC-5A67-4AE3-BDB1-F80B53C2DC27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{7180352E-797D-4A52-8881-857EBD8FFCC5} = {C3BA8D67-8EE5-4AD1-A533-7FDD61352821}
+		{3915E249-6F23-4354-A1FE-A27C6721333F} = {C3BA8D67-8EE5-4AD1-A533-7FDD61352821}
+		{E7188AAC-5A67-4AE3-BDB1-F80B53C2DC27} = {EBE8A2C2-D258-4FEC-98C9-B803DF297E99}
 	EndGlobalSection
 EndGlobal
