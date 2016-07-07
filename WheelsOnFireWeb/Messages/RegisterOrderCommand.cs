@@ -1,9 +1,10 @@
-﻿//using WheelsOnFire.Messaging;
+﻿#if NET461
+using WheelsOnFire.Messaging;
 using WheelsOnFireWeb.ViewModels;
 
 namespace WheelsOnFireWeb.Messages
 {
-    public class RegisterOrderCommand //: IRegisterOrderCommand
+    public class RegisterOrderCommand : IRegisterOrderCommand
     {
         private readonly OrderViewModel viewModel;
         public RegisterOrderCommand(OrderViewModel viewModel)
@@ -23,3 +24,4 @@ namespace WheelsOnFireWeb.Messages
         public bool Oversized => viewModel.Oversized;
     }
 }
+#endif
