@@ -8,6 +8,7 @@
         "bin/Debug/WheelsOnFire.Messaging.dll": {}
       },
       "runtime": {
+        "../packages/RabbitMQ.Client.3.6.3/lib/net45/RabbitMQ.Client.dll": {},
         "bin/Debug/WheelsOnFire.Messaging.dll": {}
       },
       "contentFiles": {

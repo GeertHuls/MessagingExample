@@ -1545,6 +1545,15 @@
           "lib/net45/NuGet.Versioning.dll": {}
         }
       },
+      "RabbitMQ.Client/3.6.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/RabbitMQ.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net45/RabbitMQ.Client.dll": {}
+        }
+      },
       "System.AppContext/4.1.0": {
         "type": "package",
         "frameworkAssemblies": [
@@ -3601,6 +3610,19 @@
         "lib/net45/NuGet.Versioning.xml",
         "lib/netstandard1.0/NuGet.Versioning.dll",
         "lib/netstandard1.0/NuGet.Versioning.xml"
+      ]
+    },
+    "RabbitMQ.Client/3.6.3": {
+      "sha512": "FZaw0CaSPrPDRctaCEUF1lDeb4YMYAmGF+Os2H7/NedvYU1/9wgmidHqYibM9hLRYf8VMuNeUgF+heY2kecU0w==",
+      "type": "package",
+      "path": "RabbitMQ.Client/3.6.3",
+      "files": [
+        "RabbitMQ.Client.3.6.3.nupkg.sha512",
+        "RabbitMQ.Client.nuspec",
+        "lib/net45/RabbitMQ.Client.dll",
+        "lib/net45/RabbitMQ.Client.xml",
+        "lib/netcore45/RabbitMQ.Client.dll",
+        "lib/netcore45/RabbitMQ.Client.xml"
       ]
     },
     "System.AppContext/4.1.0": {
@@ -6366,7 +6388,8 @@
       "Microsoft.Extensions.Logging.Console >= 1.0.0",
       "Microsoft.Extensions.Logging.Debug >= 1.0.0",
       "Microsoft.Extensions.Options.ConfigurationExtensions >= 1.0.0",
-      "Microsoft.VisualStudio.Web.BrowserLink.Loader >= 14.0.0"
+      "Microsoft.VisualStudio.Web.BrowserLink.Loader >= 14.0.0",
+      "RabbitMQ.Client >= 3.6.3"
     ],
     ".NETFramework,Version=v4.6.1": [
       "WheelsOnFire.Messaging"
