@@ -1,6 +1,4 @@
-﻿
-
-using WheelsOnFire.Messaging;
+﻿using WheelsOnFire.Messaging;
 
 namespace WheelsOnFire.Registration.Console.Messages
 {
