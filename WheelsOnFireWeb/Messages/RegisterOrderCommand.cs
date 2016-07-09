@@ -1,5 +1,4 @@
-﻿#if NET461
-using WheelsOnFire.Messaging;
+﻿using WheelsOnFire.Messaging;
 using WheelsOnFireWeb.ViewModels;
 
 namespace WheelsOnFireWeb.Messages
@@ -24,4 +23,3 @@ namespace WheelsOnFireWeb.Messages
         public bool Oversized => viewModel.Oversized;
     }
 }
-#endif
