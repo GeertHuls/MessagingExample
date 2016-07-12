@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WheelsOnFireWeb.Messages;
 using WheelsOnFireWeb.ViewModels;
 
 namespace WheelsOnFireWeb.Controllers
@@ -13,9 +14,12 @@ namespace WheelsOnFireWeb.Controllers
         [HttpPost]
         public IActionResult RegisterOrder(OrderViewModel model)
         {
-            //var registerOrderCommand = new RegisterOrderCommand(model);
+            var registerOrderCommand = new RegisterOrderCommand(model);
 
-            //Send RegisterOrderCommand
+            using (var rabbitMqManager = new RabbitMqManager())
+            {
+                rabbitMqManager.SendRegisterOrderCommand(registerOrderCommand);
+            }
 
             return View("Thanks");
         }
