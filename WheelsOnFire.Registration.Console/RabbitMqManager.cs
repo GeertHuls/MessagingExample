@@ -46,7 +46,7 @@ namespace WheelsOnFire.Registration.Console
 
         public void SendOrderRegisteredEvent(IOrderRegisteredEvent command)
         {
-            SetupExchangeAndQueue();
+            EnsureMessageBrokerExits();
 
             var serializedCommand = JsonConvert.SerializeObject(command);
 
@@ -60,7 +60,7 @@ namespace WheelsOnFire.Registration.Console
                 body: Encoding.UTF8.GetBytes(serializedCommand));
         }
 
-        private void SetupExchangeAndQueue()
+        private void EnsureMessageBrokerExits()
         {
             _channel.ExchangeDeclare(
                 exchange: RabbitMqConstants.OrderRegisteredExchange,

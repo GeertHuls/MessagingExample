@@ -27,6 +27,8 @@ namespace WheelsOnFireWeb
             messageProperties.ContentType =
                 RabbitMqConstants.JsonMimeType;
 
+            messageProperties.CorrelationId = Guid.NewGuid().ToString();
+
             _channel.BasicPublish(
                 exchange: RabbitMqConstants.RegisterOrderExchange,
                 routingKey: "",

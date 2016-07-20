@@ -26,6 +26,8 @@ namespace WheelsOnFire.Registration.Console
                 throw new ArgumentException(
                     $"Can't handle content type {properties.ContentType}");
 
+            System.Console.WriteLine($"Correclation id = {properties.CorrelationId}");
+
             var message = Encoding.UTF8.GetString(body);
             var commandObj = 
                 JsonConvert.DeserializeObject<RegisterOrderCommand>(
