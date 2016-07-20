@@ -8,7 +8,11 @@
         "bin/Debug/WheelsOnFire.Messaging.dll": {}
       },
       "runtime": {
-        "../packages/RabbitMQ.Client.3.6.3/lib/net45/RabbitMQ.Client.dll": {},
+        "../packages/MassTransit.3.3.5/lib/net452/MassTransit.dll": {},
+        "../packages/MassTransit.RabbitMQ.3.3.5/lib/net452/MassTransit.RabbitMqTransport.dll": {},
+        "../packages/NewId.2.1.3/lib/net45/NewId.dll": {},
+        "../packages/Newtonsoft.Json.7.0.1/lib/net45/Newtonsoft.Json.dll": {},
+        "../packages/RabbitMQ.Client.3.6.2/lib/net45/RabbitMQ.Client.dll": {},
         "bin/Debug/WheelsOnFire.Messaging.dll": {}
       },
       "contentFiles": {

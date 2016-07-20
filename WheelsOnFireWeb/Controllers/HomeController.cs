@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using WheelsOnFireWeb.Messages;
+﻿using System;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using WheelsOnFire.Messaging;
 using WheelsOnFireWeb.ViewModels;
 
 namespace WheelsOnFireWeb.Controllers
@@ -12,15 +14,27 @@ namespace WheelsOnFireWeb.Controllers
         }
 
         [HttpPost]
-        public IActionResult RegisterOrder(OrderViewModel model)
+        public async Task<IActionResult> RegisterOrder(OrderViewModel model)
         {
-            var registerOrderCommand = new RegisterOrderCommand(model);
+            //Send RegisterOrderCommand
+            var bus = BusConfigurator.ConfigureBus();
 
-            using (var rabbitMqManager = new RabbitMqManager())
+            var sendToUri = new Uri($"{RabbitMqConstants.RabbitMqUri}" +
+                $"{RabbitMqConstants.RegisterOrderServiceQueue}");
+            var endPoint = await bus.GetSendEndpoint(sendToUri);
+
+            await endPoint.Send<IRegisterOrderCommand>(new
             {
-                rabbitMqManager.SendRegisterOrderCommand(registerOrderCommand);
-            }
-
+                PickupName = model.PickupName,
+                PickupAddress = model.PickupAddress,
+                PickupCity = model.PickupCity,
+                DeliverName = model.DeliverName,
+                DeliverAddress = model.DeliverAddress,
+                DeliverCity = model.DeliverCity,
+                Weight = model.Weight,
+                Fragile = model.Fragile,
+                Oversized = model.Oversized
+            });
             return View("Thanks");
         }
 
