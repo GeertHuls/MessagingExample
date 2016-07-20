@@ -1,14 +1,16 @@
-﻿using WheelsOnFire.Messaging;
+﻿using System.Threading.Tasks;
+using MassTransit;
+using WheelsOnFire.Messaging;
 
 namespace WheelsOnFire.Notification.Console
 {
-    public class OrderRegisteredConsumer
+    public class OrderRegisteredConsumer : IConsumer<IOrderRegisteredEvent>
     {
-        public void Consume(IOrderRegisteredEvent registeredEvent)
+        public async Task Consume(ConsumeContext<IOrderRegisteredEvent> context)
         {
             //Send notification to user
-            System.Console.WriteLine("Customer notification sent: Order id " +
-                              $"{registeredEvent.OrderId} registered");
+            await System.Console.Out.WriteLineAsync($"Customer notification sent: " +
+                  $"Order id {context.Message.OrderId}");
         }
     }
 }
