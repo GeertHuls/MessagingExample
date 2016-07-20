@@ -5,7 +5,7 @@ using WheelsOnFire.Registration.Console.Messages;
 
 namespace WheelsOnFire.Registration.Console
 {
-    public class RegisteredOrderCommandConsumer: IConsumer<IRegisterOrderCommand>
+    public class RegisterOrderCommandConsumer: IConsumer<IRegisterOrderCommand>
     {
         public async Task Consume(ConsumeContext<IRegisterOrderCommand> context)
         {
