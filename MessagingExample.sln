@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WheelsOnFire.Notification.C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WheelsOnFire.Registration.Console", "WheelsOnFire.Registration.Console\WheelsOnFire.Registration.Console.csproj", "{6FFF1D5F-BED8-4A84-BB86-5B60DC9A8E32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WheelsOnFire.Finance.Console", "WheelsOnFire.Finance.Console\WheelsOnFire.Finance.Console.csproj", "{EE908035-D604-447B-A13D-5215478512D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{6FFF1D5F-BED8-4A84-BB86-5B60DC9A8E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FFF1D5F-BED8-4A84-BB86-5B60DC9A8E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FFF1D5F-BED8-4A84-BB86-5B60DC9A8E32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE908035-D604-447B-A13D-5215478512D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE908035-D604-447B-A13D-5215478512D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE908035-D604-447B-A13D-5215478512D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE908035-D604-447B-A13D-5215478512D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,5 +52,6 @@ Global
 		{E7188AAC-5A67-4AE3-BDB1-F80B53C2DC27} = {EBE8A2C2-D258-4FEC-98C9-B803DF297E99}
 		{5417204D-3933-4328-810A-1C7E06F0A93D} = {C3BA8D67-8EE5-4AD1-A533-7FDD61352821}
 		{6FFF1D5F-BED8-4A84-BB86-5B60DC9A8E32} = {C3BA8D67-8EE5-4AD1-A533-7FDD61352821}
+		{EE908035-D604-447B-A13D-5215478512D6} = {C3BA8D67-8EE5-4AD1-A533-7FDD61352821}
 	EndGlobalSection
 EndGlobal
