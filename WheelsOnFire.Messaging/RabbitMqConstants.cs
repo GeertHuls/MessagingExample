@@ -8,5 +8,6 @@
         public const string RegisterOrderServiceQueue = "registerorder.service";
         public const string NotificationServiceQueue = "notification.service";
         public const string FinanceServiceQueue = "finance.service";
+        public const string CityMonitorServiceQueue = "citymonitor.service";
     }
 }
