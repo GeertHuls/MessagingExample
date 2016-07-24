@@ -4,18 +4,26 @@ namespace WheelsOnFire.Notification.Console.Messages
 {
     public class OrderRegisteredEvent : IOrderRegisteredEvent
     {
-        public int OrderId { get; set; }
+        private readonly IRegisterOrderCommand _command;
 
-        public string PickupName { get; set; }
-        public string PickupAddress { get; set; }
-        public string PickupCity { get; set; }
+        public OrderRegisteredEvent(IRegisterOrderCommand command, int orderId)
+        {
+            _command = command;
+            OrderId = orderId;
+        }
 
-        public string DeliverName { get; set; }
-        public string DeliverAddress { get; set; }
-        public string DeliverCity { get; set; }
+        public int OrderId { get; }
 
-        public int Weight { get; set; }
-        public bool Fragile { get; set; }
-        public bool Oversized { get; set; }
+        public string PickupName => _command.PickupName;
+        public string PickupAddress => _command.PickupAddress;
+        public string PickupCity => _command.PickupCity;
+
+        public string DeliverName => _command.DeliverName;
+        public string DeliverAddress => _command.DeliverAddress;
+        public string DeliverCity => _command.DeliverCity;
+
+        public int Weight => _command.Weight;
+        public bool Fragile => _command.Fragile;
+        public bool Oversized => _command.Oversized;
     }
 }

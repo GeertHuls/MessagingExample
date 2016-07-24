@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusConfigurator.cs" />
+    <Compile Include="ICityMessage.cs" />
     <Compile Include="IOrderRegisteredEvent.cs" />
     <Compile Include="IRegisterOrderCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
