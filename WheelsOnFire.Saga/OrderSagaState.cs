@@ -1,9 +1,16 @@
-﻿using WheelsOnFire.Messaging;
+using System;
+using Automatonymous;
 
-namespace WheelsOnFire.Registration.Console.Messages
+namespace WheelsOnFire.Saga
 {
-    public class RegisterOrderCommand: IRegisterOrderCommand
+    public class OrderSagaState : SagaStateMachineInstance
     {
+        public Guid CorrelationId { get; set; }
+        public State CurrentState { get; set; }
+
+        public DateTime ReceivedDateTime { get; set; }
+        public DateTime RegisteredDateTime { get; set; }
+
         public string PickupName { get; set; }
         public string PickupAddress { get; set; }
         public string PickupCity { get; set; }

@@ -4,15 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6FFF1D5F-BED8-4A84-BB86-5B60DC9A8E32}</ProjectGuid>
+    <ProjectGuid>{B1154775-B9A5-4BE2-B82C-66BED1C9658C}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WheelsOnFire.Registration.Console</RootNamespace>
-    <AssemblyName>WheelsOnFire.Registration.Console</AssemblyName>
+    <RootNamespace>WheelsOnFire.Saga</RootNamespace>
+    <AssemblyName>WheelsOnFire.Saga</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,8 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Automatonymous, Version=3.3.0.0, Culture=neutral, PublicKeyToken=b800c4cfcdeea87b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Automatonymous.3.3.0\lib\net452\Automatonymous.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MassTransit, Version=3.3.1.0, Culture=neutral, PublicKeyToken=b8e0e9f2f1e657fa, processorArchitecture=MSIL">
       <HintPath>..\packages\MassTransit.3.3.5\lib\net452\MassTransit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MassTransit.AutomatonymousIntegration, Version=3.3.1.0, Culture=neutral, PublicKeyToken=b8e0e9f2f1e657fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\MassTransit.Automatonymous.3.3.5\lib\net452\MassTransit.AutomatonymousIntegration.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MassTransit.RabbitMqTransport, Version=3.3.1.0, Culture=neutral, PublicKeyToken=b8e0e9f2f1e657fa, processorArchitecture=MSIL">
@@ -46,12 +53,12 @@
       <HintPath>..\packages\NewId.2.1.3\lib\net45\NewId.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="RabbitMQ.Client, Version=3.6.3.0, Culture=neutral, PublicKeyToken=89e7d7c5feba84ce, processorArchitecture=MSIL">
-      <HintPath>..\packages\RabbitMQ.Client.3.6.3\lib\net45\RabbitMQ.Client.dll</HintPath>
+    <Reference Include="RabbitMQ.Client, Version=3.6.2.0, Culture=neutral, PublicKeyToken=89e7d7c5feba84ce, processorArchitecture=MSIL">
+      <HintPath>..\packages\RabbitMQ.Client.3.6.2\lib\net45\RabbitMQ.Client.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -64,7 +71,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OrderReceivedConsumer.cs" />
+    <Compile Include="OrderReceivedEvent.cs" />
+    <Compile Include="OrderSaga.cs" />
+    <Compile Include="OrderSagaState.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

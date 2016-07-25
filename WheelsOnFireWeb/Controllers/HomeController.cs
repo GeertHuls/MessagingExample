@@ -19,8 +19,7 @@ namespace WheelsOnFireWeb.Controllers
             //Send RegisterOrderCommand
             var bus = BusConfigurator.ConfigureBus();
 
-            var sendToUri = new Uri($"{RabbitMqConstants.RabbitMqUri}" +
-                $"{RabbitMqConstants.RegisterOrderServiceQueue}");
+            var sendToUri = new Uri($"{RabbitMqConstants.RabbitMqUri}{RabbitMqConstants.SagaQueue}");
             var endPoint = await bus.GetSendEndpoint(sendToUri);
 
             await endPoint.Send<IRegisterOrderCommand>(new

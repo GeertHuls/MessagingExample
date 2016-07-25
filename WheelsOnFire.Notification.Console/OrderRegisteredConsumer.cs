@@ -9,8 +9,7 @@ namespace WheelsOnFire.Notification.Console
         public async Task Consume(ConsumeContext<IOrderRegisteredEvent> context)
         {
             //Send notification to user
-            await System.Console.Out.WriteLineAsync($"Customer notification sent: " +
-                  $"Order id {context.Message.OrderId}");
+            await System.Console.Out.WriteLineAsync($"Customer notification sent: Order id {context.Message.CorrelationId}");
         }
     }
 }

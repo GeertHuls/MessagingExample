@@ -14,7 +14,7 @@ namespace WheelsOnFire.Registration.Console
                 cfg.ReceiveEndpoint(host,
                     RabbitMqConstants.RegisterOrderServiceQueue, e =>
                     {
-                        e.Consumer<RegisterOrderCommandConsumer>();
+                        e.Consumer<OrderReceivedConsumer>();
                     });
             });
 
